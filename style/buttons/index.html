@@ -22,7 +22,6 @@
 
     h2.bb-docs {
       font-size: 1.8rem;
-      font-family: "MozTT", Sans-serif;
       font-weight: lighter;
       color: #666;
       margin: -0.1rem 0 0;
@@ -33,6 +32,10 @@
 
     div.bb-docs {
       padding: 1rem;
+    }
+
+    div.bb-docs.dark {
+      background: #000;
     }
 
     ul {
@@ -62,21 +65,21 @@
     <button disabled class="danger">Danger</button>
   </div>
 
+  <h2 class="bb-docs">Disabled with dark background</h2>
+  <div class="bb-docs dark">
+    <button disabled>Default</button>
+    <a href="#" role="button" aria-disabled="true" class="recommend">Recommend</a>
+    <button disabled class="danger">Danger</button>
+  </div>
+
   <h2 class="bb-docs">Button List </h2>
   <div class="bb-docs">
     <ul>
       <li>
-        <label>Label</label>
         <button>Default</button>
       </li>
       <li>
-        <label>Label</label>
         <button disabled="disabled">Disabled</button>
-      </li>
-      <li>
-        <button>
-          Action 1
-        </button>
       </li>
       <li>
         <button class="icon icon-view">
@@ -84,9 +87,19 @@
         </button>
       </li>
       <li>
-        <button class="icon icon-dialog">
-          Tuesday September 18, 2012
+        <button disabled="disabled" class="icon icon-view">
+          View Name
         </button>
+      </li>
+      <li>
+        <a role="button" class="icon icon-dialog">
+          Tuesday September 18, 2012
+        </a>
+      </li>
+      <li>
+        <a role="button" aria-disabled="true" class="icon icon-dialog">
+          Tuesday September 18, 2012
+        </a>
       </li>
     </ul>
   </div>
@@ -94,17 +107,18 @@
   <h2 class="bb-docs">Button list (compact mode)</h2>
   <div class="bb-docs">
     <ul class="compact">
-      <li><button>Action 1</button></li>
-      <li><button>Action 2</button></li>
       <li>
-        <button>
-          <span class="end tick"></span>
-          Action 3
-        </button>
+        <label>Description</label>
+        <button class="icon icon-dialog">Action 1</button>
       </li>
-      <li><button>Action 4</button></li>
-      <li><button>Action 5</button></li>
-      <li><button>Action 6</button></li>
+      <li>
+        <label>Description</label>
+        <button class="icon icon-dialog">Action 2</button>
+      </li>
+      <li>
+        <label>This is a large description for this action</label>
+        <button class="icon icon-dialog" disabled >Action 3 (disabled)</button>
+      </li>
     </ul>
   </div>
 </body>
